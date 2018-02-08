@@ -31,8 +31,8 @@ we get first version of line detection where we have every detected lane line su
 
 ![alt text][image1]
 
-Next step is to draw just single line over detected lines. We can see detected lines 
-as a group of start-end points and categorized them to left and right group based on line parameters they are
+Next step is to draw single line over detected lines. We can see detected lines 
+as a group of start-end points and categorize them to left and right group based on line parameters they are
 part of. Linear regression of all relevant points creates single line. Function polyfit from numpy was add 
 to function `draw_lines()`.
 
@@ -52,7 +52,7 @@ processed images we can find line even at images where line detection is not eas
 In fact any fixed definition of values is a potential problem. We define parameters for canny method and hough 
 transformation as fixed values but we are working with video, where conditions are changing in time.
 
-Next known problems occures when we get significant part of the road where line detection is not possible. 
+Next known problem occures when we get significant part of the road where line detection is not possible. 
 Our line starts to be very inaccurate because points used to count linear regression are not relevant anymore.
 
 Another problem could occure when we get sharp turn and one of the lines crosses middle of the image. I assume 
